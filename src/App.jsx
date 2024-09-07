@@ -57,7 +57,7 @@ function App() {
   const handleLogin = () => {
     if (name.trim()) {
       // Connect to the server only after the user joins
-      socket = io("http://192.168.0.102:3000");
+      socket = io("https://chat-backend-vys5.onrender.com");
       socket.emit("joinChat", name);
       setIsLoggedIn(true);
     }
