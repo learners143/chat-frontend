@@ -3,6 +3,8 @@ import { Box, Text, Input, Button, VStack, HStack, useColorMode } from "@chakra-
 import { io } from "socket.io-client";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
+import GoogleAd from  './GoogleAds'
+
 let socket; // Initialize socket outside the component to connect after user joins
 
 function App() {
@@ -72,6 +74,7 @@ function App() {
       alignItems="center"
       bg={colorMode === "dark" ? "gray.900" : "gray.100"}
     >
+      <GoogleAd />
       {!isLoggedIn ? (
         <VStack
           w="100%"
